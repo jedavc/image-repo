@@ -1,15 +1,12 @@
 class ImagesController < ApplicationController
     before_action :logged_in_user
-
-    def home
-    end
   
     def new
       @image  = current_user.images.new
     end
   
     def index
-      @images = image.all
+      @images = current_user.images.all
     end
   
     def create
@@ -54,7 +51,7 @@ class ImagesController < ApplicationController
     private
   
     def image_params
-      params.require(:image).permit(:name)
+      params.require(:image).permit(:name, :description, :picture)
     end
   
 end
