@@ -1,24 +1,27 @@
-# README
+# Jeremie David's image repository
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+This image repository allows you to create, edit, remove and modify images, pretty much like a personal cloud. 
 
-* Ruby version
+A user can authenticate (safely, with encrypted passwords) in the app to see their images. They can log in, log out and sign up.
 
-* System dependencies
+A user is only allowed to view, modify and delete their own images. 
 
-* Configuration
 
-* Database creation
+### Installation
 
-* Database initialization
+Run the following commands to get the app up and running:
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+```sh
+$ bundle install
+$ rails s
+```
 
-* ...
+_______________________
+
+This is my first ever Ruby on Rails project, I wanted to make the Shopify challenge a tad more challenging and to learn a few things along the way.
+
+Ruby version: 2.7.2
+Rails version: 6.0.3.4
