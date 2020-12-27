@@ -1,12 +1,13 @@
 <nav class="navbar navbar-expand-dark bg-dark">
   <div class="container-fluid">
-  <a class="navbar-brand" href="#">Image Repo</a>
+  <%= link_to "Images", root_path, class: "navbar-brand" %> 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     
     <% if logged_in? %>
       <ul class="nav navbar-right ">
+        <li><%= link_to "View All Users", users_path, class: "mx-2" %></li> 
         <li><%= link_to "Log out", logout_path, class: "mx-2", method: :delete %></li> 
       </ul>
     <% else %>

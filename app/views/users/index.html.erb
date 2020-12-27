@@ -1,0 +1,16 @@
+<div class='text-center'> 
+<%= link_to "Access My Images", root_path, class: "btn btn-primary" %> 
+</div>
+
+<div class="row">
+  <div>
+      <h3>
+      <% @user.each do |user| %>
+        <p>
+        <%= user.id %>: <%= user.name %>
+        </p>
+        <% end %>
+      </h3>
+
+  </div>
+</div>
