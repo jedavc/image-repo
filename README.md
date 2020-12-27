@@ -3,12 +3,13 @@ Jeremie David
 This is my first Ruby on Rails project, I wanted to make the Shopify challenge a tad more challenging.
 
 This image repository allows you to create, edit, remove and modify images securily, pretty much like a personal cloud. 
+
 Users can authenticate in the app to see their images. They can log in, log out and sign up.
 
-To run the app:
-run the following commands:
+Run the following commands to get the app up and running:
 
 bundle install
+
 rails s
 
 
