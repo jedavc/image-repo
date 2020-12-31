@@ -6,7 +6,8 @@ class ImagesController < ApplicationController
     end
   
     def index
-      @images = current_user.images.all
+      @images = Image.where(user_id: current_user.id).or(Image.where(is_protected: false))
+      # @user_name = Image.joian d asd 
     end
   
     def create
@@ -51,7 +52,7 @@ class ImagesController < ApplicationController
     private
   
     def image_params
-      params.require(:image).permit(:name, :description, :picture)
+      params.require(:image).permit(:name, :description, :picture, :is_protected)
     end
   
 end

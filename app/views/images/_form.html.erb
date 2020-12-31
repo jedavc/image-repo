@@ -25,8 +25,16 @@
       <%= form.text_area :description %>
     </div>
   
+    <div class="field">
+    <%= form.label :is_protected %><br />
+    <%= form.label :is_protected, "Yes", :value => "true"  %>
+    <%= form.radio_button :is_protected, true %>
+    <%= form.label :is_protected, "No", :value => "false" %>
+    <%= form.radio_button :is_protected, false, :checked => true %>
+  </div>
+
     <div class="actions">
-      <%= form.submit %>
+      <%= form.submit "Create image", class: "mt-2 btn btn-primary" %>
     </div>
   <% end %>
   
