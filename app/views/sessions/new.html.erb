@@ -1,17 +1,23 @@
 <h1 class='text-center'>Log in</h1>
 
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+
 <div class="row">
   <div class="col-md-6 offset-3">
-    <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+    <%= bootstrap_form_with(url: login_path, scope: :session, local: true) do |f| %>
+      <%= f.email_field :email, class: 'class="fadeIn second"' %>
+      <%= f.password_field :password, class: 'fadeIn third' %>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.submit "Log in", class: " mt-2 btn btn-primary" %>
+      <%= f.submit "Log in", class: "fadeIn fourth" %>
     <% end %>
+
+  </div>
+</div>
+
+  <div id="formFooter">
+    <%= link_to "Register", signup_path, class: "underlineHover" %> 
+  </div>
 
   </div>
 </div>
